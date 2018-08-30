@@ -91,8 +91,9 @@ ith Iteration End
 \Rpackage{iterClust} depends on \Rpackage{SummarizedExperiment} and \Rpackage{Biobase}. Running examples in \Rpackage{iterClust} requires \Rpackage{tsne}, \Rpackage{cluster}, \Rpackage{ConsensusClusterPlus} and \Rpackage{bcellViper}. To install \Rpackage{iterClust}, source biocLite from bioconductor
 
 \begin{verbatim}
-source("http://www.bioconductor.org/biocLite.R")
-biocLite("iterClust")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("iterClust")
 \end{verbatim}
 
 %------------------------------------------------------------
